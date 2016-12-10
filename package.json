@@ -1,0 +1,19 @@
+{
+  "name": "okay-mann",
+  "version": "1.0.0",
+  "description": "Okay Mann portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "budo index.js --live -t es2020"
+  },
+  "author": "Darren Hebner",
+  "license": "ISC",
+  "dependencies": {
+    "choo": "^3.1.1",
+    "on-load": "^3.2.0"
+  },
+  "devDependencies": {
+    "es2020": "^1.1.9"
+  }
+}

@@ -1,0 +1,326 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* END RESET */
+
+@font-face {
+  font-family: 'NocturnoDisplay Reg';
+  src: url('fonts/NocturnoDisplay-Reg.eot');
+  src: url('fonts/NocturnoDisplay-Reg.eot?#iefix') format('embedded-opentype'),
+    url('fonts/NocturnoDisplay-Reg.woff') format('woff'),
+    url('fonts/NocturnoDisplay-Reg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  transition: all 0.6s ease-in-out; 
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  background: black;
+  width: 0;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  clip: rect(0, auto, auto, 0);
+}
+
+nav ul {
+  position: fixed;
+  width: 33vw;
+  padding: 3.2em 3.2em 0 0;
+}
+
+nav ul li {
+  display: block;
+  text-align: right;
+  font-size: 3.2em;
+  line-height: 1.2em;
+}
+
+nav ul ul li {
+  font-size: 1.6em;
+  color: #666;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-icons li {
+  display: inline;
+  margin-right: 0.4em;
+}
+
+.social-icons li:last-of-type {
+  margin-right: 0;
+}
+
+.menu-button {
+  position: fixed;
+  transform: rotate(-90deg) translateX(50%);
+  color: black;
+  font-size: inherit;
+  top: 50%;
+  z-index: 2;
+  background: none;
+  border: 0;
+  transition: all 0.4s ease;
+  outline: none;
+  cursor: pointer;
+}
+
+main {
+  background: white;
+  transition: all 0.4s ease;
+  left: 33%;
+  min-height: 100vh;
+}
+
+.about main {
+  padding-left: 3.2em;
+}
+
+.nav-visible {
+  overflow: hidden;
+}
+
+.nav-visible nav {
+  width: 33vw;
+}
+
+.nav-visible .menu-button {
+  color: white;
+}
+
+.nav-visible main {
+  transform: translateX(33%);
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  top: 3.2em;
+  left: 3.2em;
+}
+
+p {
+  padding-bottom: 1.2em;
+  line-height: 1.6em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero-logo {
+  font-family: 'NocturnoDisplay Reg';
+  font-size: 12.8em;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: black;
+  z-index: 3;
+}
+
+.hero {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  left: 50vw;
+  background: url('/img/om-portrait.jpg') center center;
+  background-size: cover;
+}
+
+.portrait {
+  width: 100%;
+  height: auto;
+}
+
+.bio {
+  position: absolute;
+  top: 40%;
+  left: 37%;
+  color: black;
+  font-size: 1.6em;
+  width: 66vw;
+  max-width: 800px;
+  padding-right: 3.2em;
+  margin-bottom: 6.4em;
+}
+
+.bio h2 {
+  font-family: 'NocturnoDisplay Reg';
+  font-size: 6.4em;
+  margin-bottom: 0.6em;
+  text-indent: -10%;
+}
+
+.bio-image {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  background: url('/img/portrait.jpg') center center;
+  background-size: cover;
+  width: 25%;
+  height: 500px;
+  left: 10%;
+  top: 30%;
+  font-size: 2.4em;
+}
+
+.bio a {
+  color: black;
+}
+
+small {
+  color: #666;  
+  display: block;
+  margin: 1.2em 0;
+}
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@media (max-width: 1100px) {
+  .bio h2 {
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 770px) {
+  .hero {
+    height: 50vh;
+    width: 100%;
+    left: 0;
+  }
+
+  .hero-logo {
+    font-size: 10em;
+  }
+  
+  .nav-visible nav {
+    width: 80vw;
+  }
+
+  .nav-visible main {
+    transform: translateX(80vw);
+  }
+  
+  nav ul {
+    width: 80vw;
+  } 
+  
+  .bio h2 {
+    text-indent: 0;
+  }
+
+  .bio-image {
+    display: none;
+  }
+
+  .bio {
+    left: 0;
+    padding: 0 50px;
+    width: auto;
+  }
+
+
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 35vh;
+  }
+
+  .hero-logo {
+    font-size: 6em;
+  }
+
+  .bio {
+    top: 30%;
+  }
+
+  .bio p {
+    font-size: 0.8em;
+  }
+
+  .bio h2 {
+    font-size: 1.6em;
+    margin-bottom: 1.6em;
+  }
+
+  .bio a {
+    font-size: 0.6em;
+  }
+}
