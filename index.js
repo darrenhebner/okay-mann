@@ -59,7 +59,7 @@ const aboutView = (state, prev, send) => {
   return html`
     <div>
       <main>
-        <a href="/"><img class="logo" src="/img/logo.png"/></a>
+        <a href="/"><img class="logo" src="img/logo.png"/></a>
         <div class="bio-image"></div>
         <div class="bio">
           <h2>Biography</h2>
